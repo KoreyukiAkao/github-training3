@@ -1,0 +1,30 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Copy files to docs directory
+        run: |
+          mkdir -p docs
+          cp -f *.html docs/ || true
+          cp -f *.css docs/ || true
+          cp -f *.js docs/ || true
+          cp -f *.md docs/ || true
+          cp -f README.md docs/ || true
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: docs
+          branch: gh-pages
+          clean: true

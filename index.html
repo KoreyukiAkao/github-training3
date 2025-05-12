@@ -1,109 +1,116 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Git/GitHub 学習ガイド</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header>
-        <h1>Git/GitHub 学習ガイド</h1>
-        <nav>
-            <ul>
-                <li><a href="#basics">基本概念</a></li>
-                <li><a href="#commands">主要コマンド</a></li>
-                <li><a href="#workflow">ワークフロー</a></li>
-                <li><a href="#sourcetree">SourceTree</a></li>
-            </ul>
-        </nav>
+      <h1>Git/GitHub 学習ガイド</h1>
+      <nav>
+        <ul>
+          <li><a href="#basics">基本概念</a></li>
+          <li><a href="#commands">主要コマンド</a></li>
+          <li><a href="#workflow">ワークフロー</a></li>
+          <li><a href="#sourcetree">SourceTree</a></li>
+          <li><a href="guide.md">詳細ガイド（Markdown）</a></li>
+        </ul>
+      </nav>
     </header>
-    
+
     <main>
-        <section id="basics">
-            <h2>Git の基本概念</h2>
-            <div class="concept">
-                <h3>リポジトリ (Repository)</h3>
-                <p>プロジェクトのファイルとその変更履歴を保存する場所です。ローカルリポジトリとリモートリポジトリがあります。</p>
-            </div>
-            <div class="concept">
-                <h3>コミット (Commit)</h3>
-                <p>変更内容をリポジトリに記録することです。各コミットには一意のIDが付与されます。</p>
-            </div>
-            <div class="concept">
-                <h3>ブランチ (Branch)</h3>
-                <p>独立した作業ラインを作成する機能です。メインの開発ラインから分岐して作業できます。</p>
-            </div>
-        </section>
+      <section id="basics">
+        <h2>Git の基本概念</h2>
+        <div class="concept">
+          <h3>リポジトリ (Repository)</h3>
+          <p>
+            プロジェクトのファイルとその変更履歴を保存する場所です。ローカルリポジトリとリモートリポジトリがあります。
+          </p>
+        </div>
+        <div class="concept">
+          <h3>コミット (Commit)</h3>
+          <p>
+            変更内容をリポジトリに記録することです。各コミットには一意のIDが付与されます。
+          </p>
+        </div>
+        <div class="concept">
+          <h3>ブランチ (Branch)</h3>
+          <p>
+            独立した作業ラインを作成する機能です。メインの開発ラインから分岐して作業できます。
+          </p>
+        </div>
+      </section>
 
-        <section id="commands">
-            <h2>Git の主要コマンド</h2>
-            <div class="command">
-                <code>git clone</code>
-                <p>リモートリポジトリをローカルにコピーします。</p>
-            </div>
-            <div class="command">
-                <code>git branch</code>
-                <p>ブランチを作成・確認します。</p>
-            </div>
-            <div class="command">
-                <code>git checkout</code>
-                <p>別のブランチに切り替えます。</p>
-            </div>
-            <div class="command">
-                <code>git add</code>
-                <p>変更をステージングエリアに追加します。</p>
-            </div>
-            <div class="command">
-                <code>git commit</code>
-                <p>ステージングされた変更をリポジトリに記録します。</p>
-            </div>
-            <div class="command">
-                <code>git push</code>
-                <p>ローカルの変更をリモートリポジトリに送信します。</p>
-            </div>
-            <div class="command">
-                <code>git pull</code>
-                <p>リモートリポジトリの変更をローカルに取り込みます。</p>
-            </div>
-        </section>
+      <section id="commands">
+        <h2>Git の主要コマンド</h2>
+        <div class="command">
+          <code>git clone</code>
+          <p>リモートリポジトリをローカルにコピーします。</p>
+        </div>
+        <div class="command">
+          <code>git branch</code>
+          <p>ブランチを作成・確認します。</p>
+        </div>
+        <div class="command">
+          <code>git checkout</code>
+          <p>別のブランチに切り替えます。</p>
+        </div>
+        <div class="command">
+          <code>git add</code>
+          <p>変更をステージングエリアに追加します。</p>
+        </div>
+        <div class="command">
+          <code>git commit</code>
+          <p>ステージングされた変更をリポジトリに記録します。</p>
+        </div>
+        <div class="command">
+          <code>git push</code>
+          <p>ローカルの変更をリモートリポジトリに送信します。</p>
+        </div>
+        <div class="command">
+          <code>git pull</code>
+          <p>リモートリポジトリの変更をローカルに取り込みます。</p>
+        </div>
+      </section>
 
-        <section id="workflow">
-            <h2>GitHub ワークフロー</h2>
-            <ol>
-                <li>Issue を作成して作業内容を明確にする</li>
-                <li>新しいブランチを作成する</li>
-                <li>変更を実装する</li>
-                <li>変更をコミットする</li>
-                <li>リモートリポジトリにプッシュする</li>
-                <li>Pull Request を作成する</li>
-                <li>レビューを受ける</li>
-                <li>マージする</li>
-            </ol>
-        </section>
+      <section id="workflow">
+        <h2>GitHub ワークフロー</h2>
+        <ol>
+          <li>Issue を作成して作業内容を明確にする</li>
+          <li>新しいブランチを作成する</li>
+          <li>変更を実装する</li>
+          <li>変更をコミットする</li>
+          <li>リモートリポジトリにプッシュする</li>
+          <li>Pull Request を作成する</li>
+          <li>レビューを受ける</li>
+          <li>マージする</li>
+        </ol>
+      </section>
 
-        <section id="sourcetree">
-            <h2>SourceTree の使い方</h2>
-            <p>SourceTree は Git の操作をグラフィカルに行えるツールです。</p>
-            <div class="sourcetree-features">
-                <div class="feature">
-                    <h3>リポジトリの管理</h3>
-                    <p>複数のリポジトリを一元管理できます。</p>
-                </div>
-                <div class="feature">
-                    <h3>変更の可視化</h3>
-                    <p>変更内容を視覚的に確認できます。</p>
-                </div>
-                <div class="feature">
-                    <h3>ブランチの操作</h3>
-                    <p>ブランチの作成・切り替え・マージなどを簡単に行えます。</p>
-                </div>
-            </div>
-        </section>
+      <section id="sourcetree">
+        <h2>SourceTree の使い方</h2>
+        <p>SourceTree は Git の操作をグラフィカルに行えるツールです。</p>
+        <div class="sourcetree-features">
+          <div class="feature">
+            <h3>リポジトリの管理</h3>
+            <p>複数のリポジトリを一元管理できます。</p>
+          </div>
+          <div class="feature">
+            <h3>変更の可視化</h3>
+            <p>変更内容を視覚的に確認できます。</p>
+          </div>
+          <div class="feature">
+            <h3>ブランチの操作</h3>
+            <p>ブランチの作成・切り替え・マージなどを簡単に行えます。</p>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer>
-        <p>GitHub/SourceTree 学習プロジェクト &copy; 2025</p>
+      <p>GitHub/SourceTree 学習プロジェクト &copy; 2025</p>
     </footer>
-</body>
+  </body>
 </html>
